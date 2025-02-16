@@ -69,7 +69,7 @@ echo -e "\n${cadena^}"  # Hola Mundo
 echo -e "\n${cadena,}"  # hola Mundo
 
 # 6. Concatenación de cadenas
-echo -e "\n6. Concatenación de cadenas"
+echo -e "\n6.Concatenación de cadenas"
 
 # Al colocar juntas dos cadenas se concatenan
 str1="Hola"
@@ -78,7 +78,7 @@ resultado="$str1 $str2"
 echo -e "\n$resultado" # Imprime "Hola Mundo"
 
 # 7. Expresiones regulares y patrones
-echo -e "\n7. Expresiones regulares y patrones"
+echo -e "\n7.Expresiones regulares y patrones"
 
 # Comprobar si una cadena coincide con un patrón: Con [[ ... ]], puedes usar patrones de coincidencia glob:
 
