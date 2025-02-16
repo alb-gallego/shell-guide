@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 4.3 Bucle Until
 echo "\n4.3 Bucles Until\n"
 

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Las funciones son bloques de código reutilizables en Bash y Zsh que se definen una vez y se pueden invocar múltiples veces. Ambos intérpretes soportan funciones, pero tienen pequeñas diferencias en sintaxis, comportamiento y características avanzadas.
 

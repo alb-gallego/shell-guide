@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Bucle While
 echo "\n4.2 Bucles While\n"
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 3.1 - If/Else
 echo "\n3.1 If/Else\n"
 

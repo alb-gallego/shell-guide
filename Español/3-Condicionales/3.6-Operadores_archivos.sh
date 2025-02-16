@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 3.6 - Operadores de archivos
 # -e	El archivo o directorio existe	[ -e "archivo.txt" ]
 # -f	Es un archivo regular	[ -f "archivo.txt" ]

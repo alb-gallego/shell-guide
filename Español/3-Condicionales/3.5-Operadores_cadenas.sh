@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 3.5 - Operadores de cadenas
 echo "\n3.5 Operadores de cadenas\n"
 

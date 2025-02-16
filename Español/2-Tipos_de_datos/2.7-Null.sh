@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 2.7  Null o vacío
 echo "\n2.7 Null value\n"
 

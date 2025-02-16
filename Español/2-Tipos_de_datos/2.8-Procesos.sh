@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 2.8  Procesos
 echo "\n2.8 Procesos\n"
 

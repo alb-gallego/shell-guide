@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 2.5 Booleans (Simulación)
 echo "\n2.5 Booleans\n"
 

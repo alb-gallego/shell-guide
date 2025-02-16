@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 3.3 - Operadores numéricos
 echo "\n3.3 Operadores numéricos\n"
 # -eq (igual a)

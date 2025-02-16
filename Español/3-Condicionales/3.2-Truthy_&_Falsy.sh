@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 3.2 - Truthy y falsy
 echo "\n3.2 Truthy y falsy\n"
 

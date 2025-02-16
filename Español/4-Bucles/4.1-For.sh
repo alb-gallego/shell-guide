@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 4.1 Bucle For
 echo "\n4.1 Bucles For\n"
 

@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 # 2.6 Fechas
 echo -e "\n2.6 Fechas\n"
 
@@ -38,7 +39,7 @@ echo "Hora hace 2 horas: $hora_pasada"
 # 6. Obtener la diferencia entre dos fechas
 fecha1="2024-12-01"
 fecha2="2024-12-28"
-diferencia=$(( ($(date -d "$fecha2" +"%s") - $(date -d "$fecha1" +"%s")) / 86400 ))
+diferencia=$((($(date -d "$fecha2" +"%s") - $(date -d "$fecha1" +"%s")) / 86400))
 echo "Diferencia entre $fecha1 y $fecha2: $diferencia días"
 
 # 7. Validar una fecha

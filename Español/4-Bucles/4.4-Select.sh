@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Bucle Select
 echo "\n4.4 Bucles Select\n"
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 3.4 - Operadores Lógicos
 echo "\n3.4 Operadores Lógicos\n"
 
