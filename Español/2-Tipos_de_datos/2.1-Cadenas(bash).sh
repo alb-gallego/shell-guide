@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Shell en uso: $SHELL"
 
 # 2.1-Cadenas
 echo -e "\n2.1-Cadenas"

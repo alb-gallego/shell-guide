@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 3.1 - If/Else
-echo "\n3.1 If/Else\n"
+echo -e "\n3.1 If/Else\n"
 
 numero=6
 # La condicion debe ir entre corchetes
@@ -13,7 +13,7 @@ numero=6
 # !IMPORTANTE: añadir cierre "fi" al final del condicional
 
 if [ $numero -gt 10 ]; then
-    echo "El número es mayor que 10"
+    echo -e "El número es mayor que 10"
 else
-    echo "El número es menor o igual a 10"
+    echo -e "El número es menor o igual a 10"
 fi

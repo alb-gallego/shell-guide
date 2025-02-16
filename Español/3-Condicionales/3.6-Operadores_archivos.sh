@@ -13,18 +13,18 @@
 # -c	Es un archivo de dispositivo de carácter	[ -c "dispositivo" ]
 # -b	Es un archivo de dispositivo de bloque	[ -b "dispositivo" ]
 # -t	El descriptor de archivo está asociado a un terminal	[ -t 1 ]
-echo "\n3.6 Operadores de archivos\n"
+echo -e "\n3.6 Operadores de archivos\n"
 # INICIALIZACION DE DATOS DE PRUEBA
 archivo="archivo.txt"
-echo "Archivo de prueba" >"$archivo"
+echo -e "Archivo de prueba" >"$archivo"
 
 # Operador "-e"
 
-echo "\nArchivo existe"
+echo -e "\nArchivo existe"
 if [ -e "$archivo" ]; then
-    echo "El archivo $archivo existe"
+    echo -e "El archivo $archivo existe"
 else
-    echo "El archivo $archivo no existe"
+    echo -e "El archivo $archivo no existe"
 fi
 
 # Operador "-f"
@@ -48,19 +48,19 @@ fi
 # directorio/       -> Directorio
 # enlace_simbólico  -> Enlace simbólico que apunta a otro archivo
 
-echo "\nArchivo es regular"
+echo -e "\nArchivo es regular"
 if [ -f "$archivo" ]; then
-    echo "Es un archivo regular"
+    echo -e "Es un archivo regular"
 else
-    echo "No es un archivo regular"
+    echo -e "No es un archivo regular"
 fi
 
-echo "\nArchivo NO es regular"
+echo -e "\nArchivo NO es regular"
 archivoNr="archivo"
 if [ -f "$archivoNr" ]; then
-    echo "Es un archivo regular"
+    echo -e "Es un archivo regular"
 else
-    echo "No es un archivo regular"
+    echo -e "No es un archivo regular"
 fi
 
 #BORRAR DATOS DE PRUEBA
@@ -71,20 +71,20 @@ rm "$archivo"
 directorio="carpeta"
 mkdir $directorio
 
-echo "\nDirectorios"
+echo -e "\nDirectorios"
 if [ -d "$directorio" ]; then
-    echo "El directorio $directorio existe"
+    echo -e "El directorio $directorio existe"
 else
-    echo "El directorio $directorio no existe"
+    echo -e "El directorio $directorio no existe"
 fi
 
 #BORRAR DATOS DE PRUEBA
 rm -r $directorio
 
 if [ -d "$directorio" ]; then
-    echo "El directorio $directorio existe"
+    echo -e "El directorio $directorio existe"
 else
-    echo "El directorio $directorio no existe"
+    echo -e "El directorio $directorio no existe"
 fi
 
 # ==========================================
@@ -92,7 +92,7 @@ fi
 #  -nt	file1 es más reciente que file2	[ "file1" -nt "file2" ]
 #  -ot	file1 es más antiguo que file2	[ "file1" -ot "file2" ]
 #  -ef	Ambos archivos son el mismo (mismo inodo)	[ "file1" -ef "file2" ]
-echo "\nOperadores entre archivos\n"
+echo -e "\nOperadores entre archivos\n"
 
 # INICIALIZACION DE DATOS DE PRUEBA
 archivo1="archivo1.txt"
@@ -102,7 +102,7 @@ sleep 1
 touch $archivo1
 
 if [ $archivo1 -nt $archivo2 ]; then
-    echo "\narchivo1.txt es más reciente que archivo2.txt"
+    echo -e "\narchivo1.txt es más reciente que archivo2.txt"
 fi
 
 #BORRAR DATOS DE PRUEBA
@@ -114,7 +114,7 @@ sleep 1
 touch $archivo2
 
 if [ $archivo1 -ot $archivo2 ]; then
-    echo "\narchivo1.txt es más antiguo que archivo2.txt"
+    echo -e "\narchivo1.txt es más antiguo que archivo2.txt"
 fi
 #BORRAR DATOS DE PRUEBA
 rm $archivo1 && rm $archivo2
@@ -125,7 +125,7 @@ touch $archivo1
 ln "$archivo1" "$archivo2" # Crear enlace duro -> es como crear un puntero al archivo
 
 if [ $archivo1 -ef $archivo2 ]; then
-    echo "\nEstos archivos son el mismo, procesar solo uno"
+    echo -e "\nEstos archivos son el mismo, procesar solo uno"
 fi
 #BORRAR DATOS DE PRUEBA
 rm $archivo1 && rm $archivo2

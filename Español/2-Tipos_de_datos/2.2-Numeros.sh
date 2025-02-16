@@ -21,7 +21,7 @@ multiplicacion=$((a * b))
 division=$((a / b)) # División entera
 modulo=$((a % b))
 
-echo "Suma: $suma, Resta: $resta, Multiplicación: $multiplicacion, División: $division, Módulo: $modulo"
+echo -e "Suma: $suma, Resta: $resta, Multiplicación: $multiplicacion, División: $division, Módulo: $modulo"
 
 # Incremento y decremento
 
@@ -60,7 +60,7 @@ not=$((~a))    # Complemento: depende del sistema
 # shift_left=$((a << 1))  # 1010 -> 10
 shift_right=$((a >> 1)) # 0010 -> 2
 
-echo "AND: $and, OR: $or, XOR: $xor, NOT: $not, <<: $shift_left, >>: $shift_right"
+echo -e "AND: $and, OR: $or, XOR: $xor, NOT: $not, <<: $shift_left, >>: $shift_right"
 
 # 4. Uso de números en bucles
 
@@ -69,14 +69,14 @@ echo "AND: $and, OR: $or, XOR: $xor, NOT: $not, <<: $shift_left, >>: $shift_righ
 # Ejemplo con for:
 
 for i in {1..5}; do
-    echo "Número: $i"
+    echo -e "Número: $i"
 done
 
 # Ejemplo con while:
 
 n=1
 while [ $n -le 5 ]; do
-    echo "Número: $n"
+    echo -e "Número: $n"
     ((n++))
 done
 
@@ -86,14 +86,14 @@ done
 
 # Operaciones con bc:
 
-echo "5 + 2.5" | bc       # Suma
-echo "10 / 3" | bc -l     # División con decimales
-echo "scale=2; 22/7" | bc # Resultado con dos decimales
+echo -e "5 + 2.5" | bc       # Suma
+echo -e "10 / 3" | bc -l     # División con decimales
+echo -e "scale=2; 22/7" | bc # Resultado con dos decimales
 
 # Uso de funciones matemáticas en bc:
 
-echo "sqrt(16)" | bc           # Raíz cuadrada
-echo "scale=4; s(0.5)" | bc -l # Seno de 0.5 radianes
+echo -e "sqrt(16)" | bc           # Raíz cuadrada
+echo -e "scale=4; s(0.5)" | bc -l # Seno de 0.5 radianes
 
 # 6. Validación de números
 
@@ -103,18 +103,18 @@ echo "scale=4; s(0.5)" | bc -l # Seno de 0.5 radianes
 
 numero="123"
 if [[ $numero =~ ^[0-9]+$ ]]; then
-    echo "$numero es un número entero"
+    echo -e "$numero es un número entero"
 else
-    echo "$numero no es un número"
+    echo -e "$numero no es un número"
 fi
 
 # Validar punto flotante:
 
 numero="12.34"
 if [[ $numero =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
-    echo "$numero es un número válido"
+    echo -e "$numero es un número válido"
 else
-    echo "$numero no es válido"
+    echo -e "$numero no es válido"
 fi
 
 # 7. Conversiones numéricas
@@ -123,28 +123,28 @@ fi
 
 hex="0x1A"
 decimal=$((hex))
-echo "Decimal: $decimal"
+echo -e "Decimal: $decimal"
 
 # Octal a decimal:
 
 octal="017"
 decimal=$((octal))
-echo "Decimal: $decimal"
+echo -e "Decimal: $decimal"
 
 # Decimal a binario:
 
 decimal=10
-binario=$(echo "obase=2;$decimal" | bc)
-echo "Binario: $binario"
+binario=$(echo -e "obase=2;$decimal" | bc)
+echo -e "Binario: $binario"
 
 # 8. Ejemplo avanzado: Calculadora interactiva
 
-echo "Introduce dos números:"
+echo -e "Introduce dos números:"
 read num1
 read num2
 
-echo "Selecciona una operación: +, -, *, /, %"
+echo -e "Selecciona una operación: +, -, *, /, %"
 read operacion
 
-resultado=$(echo "$num1 $operacion $num2" | bc -l)
-echo "Resultado: $resultado"
+resultado=$(echo -e "$num1 $operacion $num2" | bc -l)
+echo -e "Resultado: $resultado"

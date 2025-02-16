@@ -30,9 +30,9 @@ last_value=$? # $? captura el estado de salida del último comando
 
 # Usar variables
 # Para usar variables hay que usar el simbolo "$"
-echo "Valor leido $last_value"
-echo "Hola, $nombre"
-echo "El número es $numero"
+echo -e "Valor leido $last_value"
+echo -e "Hola, $nombre"
+echo -e "El número es $numero"
 
 #  03 -  Leer entrada del usuario
 echo -e "\n¿Cómo te llamas?"

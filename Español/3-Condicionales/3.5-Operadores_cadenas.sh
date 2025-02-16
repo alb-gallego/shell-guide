@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 3.5 - Operadores de cadenas
-echo "\n3.5 Operadores de cadenas\n"
+echo -e "\n3.5 Operadores de cadenas\n"
 
 # "=" igual a
 # "!=" NO es igual a
@@ -11,29 +11,29 @@ echo "\n3.5 Operadores de cadenas\n"
 cadena="Prueba"
 
 # Operador "="
-echo "\nIgual a (cadena_a_evaluar1 = cadena_a_evaluar2)"
+echo -e "\nIgual a (cadena_a_evaluar1 = cadena_a_evaluar2)"
 
 if [ $cadena = "Prueba" ]; then
-    echo "1 - La cadena coincide\n"
+    echo -e "1 - La cadena coincide\n"
 fi
 
 # Operador "!="
-echo "\nDiferente a (cadena_a_evaluar1 != cadena_a_evaluar)"
+echo -e "\nDiferente a (cadena_a_evaluar1 != cadena_a_evaluar)"
 
 if [ $cadena != "Prueba1" ]; then
-    echo "2 - La cadena NO coincide\n"
+    echo -e "2 - La cadena NO coincide\n"
 fi
 
 # Operador "-z"
-echo "\nLongitud de cadena 0 (-z cadena_a_evaluar)"
+echo -e "\nLongitud de cadena 0 (-z cadena_a_evaluar)"
 cadena=""
 if [ -z $cadena ]; then
-    echo "3 - La cadena tiene longitud 0\n"
+    echo -e "3 - La cadena tiene longitud 0\n"
 fi
 
 # Operador "-n"
-echo "\nLongitud de cadena mayor a 0 (-n cadena_a_evaluar)"
+echo -e "\nLongitud de cadena mayor a 0 (-n cadena_a_evaluar)"
 cadena="Prueba"
 if [ -n $cadena ]; then
-    echo "4 - La cadena NO tiene longitud 0\n"
+    echo -e "4 - La cadena NO tiene longitud 0\n"
 fi

@@ -34,8 +34,8 @@ declare -A persona
 persona["nombre"]="Juan"
 persona["edad"]=25
 
-echo "Nombre: ${persona[nombre]}" # Imprime "Juan"
-echo "Edad: ${persona[edad]}"     # Imprime 25
+echo -e "Nombre: ${persona[nombre]}" # Imprime "Juan"
+echo -e "Edad: ${persona[edad]}"     # Imprime 25
 
 # 3. Modificación de los Valores en un Map
 
@@ -44,7 +44,7 @@ echo "Edad: ${persona[edad]}"     # Imprime 25
 # Ejemplo:
 
 persona["edad"]=26
-echo "Edad actualizada: ${persona[edad]}" # Imprime 26
+echo -e "Edad actualizada: ${persona[edad]}" # Imprime 26
 
 # 4. Comprobación de la Existencia de una Clave en un Map
 
@@ -57,9 +57,9 @@ persona["nombre"]="Juan"
 persona["edad"]=25
 
 if [[ -v persona[nombre] ]]; then
-    echo "La clave 'nombre' existe en el map."
+    echo -e "La clave 'nombre' existe en el map."
 else
-    echo "La clave 'nombre' no existe en el map."
+    echo -e "La clave 'nombre' no existe en el map."
 fi
 
 # 5. Obtener Todas las Claves y Valores de un Map
@@ -73,8 +73,8 @@ persona["nombre"]="Juan"
 persona["edad"]=25
 persona["ciudad"]="Sevilla"
 
-echo "Claves: ${!persona[@]}" # Imprime "nombre edad ciudad"
-echo "Valores: ${persona[@]}" # Imprime "Juan 25 Sevilla"
+echo -e "Claves: ${!persona[@]}" # Imprime "nombre edad ciudad"
+echo -e "Valores: ${persona[@]}" # Imprime "Juan 25 Sevilla"
 
 # 6. Iterar sobre un Map (Array Asociativo)
 
@@ -92,7 +92,7 @@ persona["edad"]=25
 persona["ciudad"]="Sevilla"
 
 for clave in "${!persona[@]}"; do
-    echo "Clave: $clave"
+    echo -e "Clave: $clave"
 done
 
 # Salida esperada:
@@ -111,7 +111,7 @@ persona["edad"]=25
 persona["ciudad"]="Sevilla"
 
 for clave in "${!persona[@]}"; do
-    echo "Clave: $clave, Valor: ${persona[$clave]}"
+    echo -e "Clave: $clave, Valor: ${persona[$clave]}"
 done
 
 # Salida esperada:
@@ -131,8 +131,8 @@ persona["nombre"]="Juan"
 persona["edad"]=25
 persona["ciudad"]="Sevilla"
 
-unset "persona["edad"]"                                  # Elimina la clave "edad"
-echo "Claves después de eliminar 'edad': ${!persona[@]}" # Imprime "nombre ciudad"
+unset "persona["edad"]"                                     # Elimina la clave "edad"
+echo -e "Claves después de eliminar 'edad': ${!persona[@]}" # Imprime "nombre ciudad"
 
 # 8. Verificar si un Valor Existe en un Map
 
@@ -156,9 +156,9 @@ for valor in "${persona[@]}"; do
 done
 
 if $found; then
-    echo "El valor '$valor_a_buscar' existe en el map."
+    echo -e "El valor '$valor_a_buscar' existe en el map."
 else
-    echo "El valor '$valor_a_buscar' no existe en el map."
+    echo -e "El valor '$valor_a_buscar' no existe en el map."
 fi
 
 # Ejemplo con [[ =~ ]]:
@@ -171,9 +171,9 @@ persona["ciudad"]="Sevilla"
 valor_a_buscar="Sevilla"
 
 if [[ "${persona[@]}" =~ "$valor_a_buscar" ]]; then
-    echo "El valor '$valor_a_buscar' existe en el map."
+    echo -e "El valor '$valor_a_buscar' existe en el map."
 else
-    echo "El valor '$valor_a_buscar' no existe en el map."
+    echo -e "El valor '$valor_a_buscar' no existe en el map."
 fi
 
 # 9. Arrays Multidimensionales con Maps
@@ -190,7 +190,7 @@ estudiantes["Ana"]="History, Art"
 estudiantes["Carlos"]="Physics, Chemistry"
 
 for estudiante in "${!estudiantes[@]}"; do
-    echo "$estudiante estudia ${estudiantes[$estudiante]}"
+    echo -e "$estudiante estudia ${estudiantes[$estudiante]}"
 done
 
 # Salida esperada:
@@ -207,7 +207,7 @@ done
 # •	Obtener claves: ${!map[@]}
 # •	Obtener valores: ${map[@]}
 # •	Iterar sobre claves: for clave in "${!map[@]}"; do ...
-# •	Iterar sobre claves y valores: for clave in "${!map[@]}"; do echo "Clave: $clave, Valor: ${map[$clave]}"; done
+# •	Iterar sobre claves y valores: for clave in "${!map[@]}"; do echo -e "Clave: $clave, Valor: ${map[$clave]}"; done
 # •	Eliminar un valor: unset map[clave]
 # •	Verificar existencia de clave: [[ -v map[clave] ]]
 # •	Verificar existencia de valor: [[ "${map[@]}" =~ "$valor" ]]

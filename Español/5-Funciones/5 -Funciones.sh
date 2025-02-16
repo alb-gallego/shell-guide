@@ -36,8 +36,8 @@
 # Ejemplo:
 
 mi_funcion() {
-  echo "Primer argumento: $1"
-  echo "Todos los argumentos: $@"
+  echo -e "Primer argumento: $1"
+  echo -e "Todos los argumentos: $@"
 }
 
 mi_funcion "Hola" "Mundo"
@@ -58,7 +58,7 @@ mi_funcion "Hola" "Mundo"
 
 mi_funcion() {
   local var="Soy local"
-  echo "$var"
+  echo -e "$var"
 }
 
 mi_funcion
@@ -73,11 +73,11 @@ mi_funcion
 
 mi_funcion() {
   local suma=$(( $1 + $2 ))
-  echo "$suma"
+  echo -e "$suma"
   return 0
 }
 resultado=$(mi_funcion 5 10)
-echo "Resultado: $resultado"
+echo -e "Resultado: $resultado"
 
 # Zsh
 
@@ -91,11 +91,11 @@ echo "Resultado: $resultado"
 
 mi_funcion() {
   local var="Local"
-  echo "Dentro de la función: $var"
+  echo -e "Dentro de la función: $var"
 }
 
 mi_funcion
-echo "Fuera de la función: ${var:-No definida}"
+echo -e "Fuera de la función: ${var:-No definida}"
 
 # Salida:
 
@@ -108,7 +108,7 @@ echo "Fuera de la función: ${var:-No definida}"
 
 # Zsh soporta funciones anónimas, que son funciones definidas sin nombre y usadas inmediatamente:
 
-(){ echo "Soy una función anónima"; } 
+(){ echo -e "Soy una función anónima"; } 
 
 # Esto no está disponible en Bash.
 
@@ -117,7 +117,7 @@ echo "Fuera de la función: ${var:-No definida}"
 # En Zsh, puedes usar argumentos posicionados para funciones con longitud fija o variable. Esto lo hace más robusto para manejar entradas:
 
 mi_funcion() {
-  echo "Primero: $1, Segundo: $2"
+  echo -e "Primero: $1, Segundo: $2"
 }
 mi_funcion uno dos tres
 
@@ -129,7 +129,7 @@ mi_funcion uno dos tres
 
 # Función de ejemplo
 mi_comando() {
-  echo "Ejecutaste: $1"
+  echo -e "Ejecutaste: $1"
 }
 
 # Definir completado
@@ -144,7 +144,7 @@ compdef '_files' mi_comando
 # Bash y Zsh
 
 mi_funcion() {
-  echo "Soy una función exportada"
+  echo -e "Soy una función exportada"
 }
 export -f mi_funcion
 

@@ -35,7 +35,7 @@ echo ${frutas[2]} # Imprime "pera"
 # Ejemplo:
 
 frutas=("manzana" "banana" "pera")
-echo "El número de frutas es: ${#frutas[@]}" # Imprime 3
+echo -e "El número de frutas es: ${#frutas[@]}" # Imprime 3
 
 # 4. Iterar sobre un Array
 
@@ -45,7 +45,7 @@ echo "El número de frutas es: ${#frutas[@]}" # Imprime 3
 
 frutas=("manzana" "banana" "pera")
 for fruta in "${frutas[@]}"; do
-    echo "Fruta: $fruta"
+    echo -e "Fruta: $fruta"
 done
 
 # Salida esperada:
@@ -58,7 +58,7 @@ done
 
 frutas=("manzana" "banana" "pera")
 for ((i = 0; i < ${#frutas[@]}; i++)); do
-    echo "Fruta $((i + 1)): ${frutas[$i]}"
+    echo -e "Fruta $((i + 1)): ${frutas[$i]}"
 done
 
 # Salida esperada:
@@ -107,9 +107,9 @@ echo ${frutas[@]} # Imprime "manzana pera"
 
 frutas=("manzana" "banana" "pera")
 if [[ " ${frutas[@]} " =~ " banana " ]]; then
-    echo "Banana está en el array."
+    echo -e "Banana está en el array."
 else
-    echo "Banana no está en el array."
+    echo -e "Banana no está en el array."
 fi
 
 # Resumen de Operaciones Básicas con Arrays en Bash
