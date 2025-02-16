@@ -1,5 +1,7 @@
-# 2.4 Mapas
-echo "\n2.4 Mapas\n"
+#!/bin/bash
+
+# 2.4-Mapas
+echo -e "\n2.4-Mapas\n"
 
 #  En zsh (y en bash con algunas limitaciones), los maps (también llamados arrays asociativos) son una estructura de datos que te permite asociar claves a valores
 
@@ -129,7 +131,7 @@ persona["nombre"]="Juan"
 persona["edad"]=25
 persona["ciudad"]="Sevilla"
 
-unset persona["edad"]                                    # Elimina la clave "edad"
+unset "persona["edad"]"                                  # Elimina la clave "edad"
 echo "Claves después de eliminar 'edad': ${!persona[@]}" # Imprime "nombre ciudad"
 
 # 8. Verificar si un Valor Existe en un Map
@@ -159,7 +161,7 @@ else
     echo "El valor '$valor_a_buscar' no existe en el map."
 fi
 
-Ejemplo con [[ =~ ]]:
+# Ejemplo con [[ =~ ]]:
 
 declare -A persona
 persona["nombre"]="Juan"

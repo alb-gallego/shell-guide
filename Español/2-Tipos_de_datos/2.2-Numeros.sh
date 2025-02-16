@@ -1,5 +1,7 @@
-# 2.2 Números
-echo "\n2.2 Números\n"
+#!/bin/bash
+
+# 2.2-Números
+echo -e "\n2.2-Números\n"
 
 # 1. Operaciones aritméticas básicas
 

@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# 1-Introducción
+echo -e "\n1-Introducción\n"
+
 # Para poder ejecutar un script de bash es siempre necesario que el sistema
 # de permisos de ejecución a dicho script:
 # Ejecutar el siguiente comando: "chmod +x mi_script.sh"
@@ -6,12 +11,16 @@
 # - ./mi_script.sh
 # - source mi_script.sh
 
-# 01 - Elige el interprete de comandos que debe usar este script
-# los mas famosos son bash(#!/bin/bash) y zsh(#!/bin/zsh)
-# En este caso usaremos bash
-#!/bin/bash
+# 1. Interpretes de comandos
+#  Elige el interprete de comandos que debe usar este script
+# los mas famosos son bash(#!/usr/bin/env bash) y zsh(#!/usr/bin/env zsh)
+# En este caso usaremos bash para la mayoria de ejemplos
+#!/usr/bin/env bash
 
-# 02 - Declarar variables
+# Tambien se puede usar #!/bin/zsh o #!/bin/bash al principio del script
+
+# 2. Declarar y usar variables
+
 # Declarar y asignar
 nombre="Mundo"
 numero=42
@@ -26,8 +35,8 @@ echo "Hola, $nombre"
 echo "El número es $numero"
 
 #  03 -  Leer entrada del usuario
-echo "¿Cómo te llamas?"
+echo -e "\n¿Cómo te llamas?"
 # Establecemos que variable almacenara el valor que introduzca el usuario
 # Si la variable contiene un valor este se sobreescribira
 read nombre
-echo "Hola, $nombre, ¡bienvenido!"
+echo -e "\nHola, $nombre, ¡bienvenido!"

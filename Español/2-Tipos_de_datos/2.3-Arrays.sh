@@ -1,9 +1,11 @@
-# 2.3 Arrays
-echo "\n2.3 Arrays\n"
+#!/bin/bash
+
+# 2.3-Arrays
+echo -e "\n2.3-Arrays\n"
 
 # 1. Creación de un Array
 
-# En zsh, puedes crear un array de manera sencilla utilizando paréntesis ().
+# En Bash, puedes crear un array de manera sencilla utilizando paréntesis ().
 
 # Sintaxis básica:
 
@@ -55,8 +57,8 @@ done
 # Ejemplo 2: Iterar usando índices
 
 frutas=("manzana" "banana" "pera")
-for i in {1..3}; do
-    echo "Fruta $i: ${frutas[$i - 1]}"
+for ((i = 0; i < ${#frutas[@]}; i++)); do
+    echo "Fruta $((i + 1)): ${frutas[$i]}"
 done
 
 # Salida esperada:
@@ -97,57 +99,7 @@ echo ${frutas[@]} # Imprime "manzana pera"
 
 # Ten en cuenta que, al eliminar un elemento, el array tendrá un “hueco” en esa posición, y los índices pueden no ser consecutivos.
 
-# 8. Arrays Asociativos (Diccionarios)
-
-# En zsh, también puedes usar arrays asociativos, que son como diccionarios en otros lenguajes. Cada elemento del array tiene una clave en lugar de un índice numérico.
-
-# Sintaxis básica para arrays asociativos:
-
-declare -A array_asociativo
-array_asociativo["clave1"]="valor1"
-array_asociativo["clave2"]="valor2"
-
-Ejemplo:
-
-declare -A persona
-persona["nombre"]="Juan"
-persona["edad"]=25
-persona["ciudad"]="Sevilla"
-
-echo "Nombre: ${persona[nombre]}" # Imprime "Juan"
-echo "Edad: ${persona[edad]}"     # Imprime 25
-
-# 9. Obtener todas las Claves y Valores de un Array Asociativo
-
-# Para obtener todas las claves o todos los valores de un array asociativo, puedes usar ${!array[@]} para las claves y ${array[@]} para los valores.
-
-# Ejemplo:
-
-declare -A persona
-persona["nombre"]="Juan"
-persona["edad"]=25
-persona["ciudad"]="Sevilla"
-
-echo "Claves: ${!persona[@]}" # Imprime "nombre edad ciudad"
-echo "Valores: ${persona[@]}" # Imprime "Juan 25 Sevilla"
-
-# 10. Arrays Multidimensionales Simulados
-
-# Aunque zsh y bash no soportan directamente arrays multidimensionales, puedes simular este comportamiento utilizando arrays de arrays. Una forma común es almacenar listas dentro de arrays asociativos.
-
-# Ejemplo:
-
-declare -A matriz
-matriz["fila1"]="1 2 3"
-matriz["fila2"]="4 5 6"
-matriz["fila3"]="7 8 9"
-
-# Imprime 1 2 3
-echo "Elemento [1][1]: ${matriz[fila1]}"
-
-# Para acceder a elementos específicos dentro de la fila, necesitarás usar el comando set para dividir los valores dentro de la “fila”.
-
-# 11. Comprobación de Existencia de un Elemento en un Array
+# 8. Comprobación de Existencia de un Elemento en un Array
 
 # Puedes comprobar si un índice o una clave existe en un array utilizando una sentencia if.
 
@@ -160,7 +112,7 @@ else
     echo "Banana no está en el array."
 fi
 
-# Resumen de Operaciones Básicas con Arrays en Zsh
+# Resumen de Operaciones Básicas con Arrays en Bash
 
 # 	•	Crear un array: array=(elemento1 elemento2 elemento3)
 # 	•	Acceder a elementos: ${array[indice]}
