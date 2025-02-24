@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # 2.4 Mapas
-echo -e "2.4 Mapas\n"
+echo "\n2.4 Mapas\n"
 
 #  En zsh los mapas (también llamados arrays asociativos) son una estructura de datos que te permite asociar claves a valores
 

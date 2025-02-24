@@ -34,7 +34,7 @@ echo ${fruits[2]} # Prints "pear"
 # Example:
 
 fruits=("apple" "banana" "pear")
-echo "The number of fruits is: ${#fruits[@]}" # Prints 3
+echo -e "The number of fruits is: ${#fruits[@]}" # Prints 3
 
 # 4. Iterating Over an Array
 
@@ -44,7 +44,7 @@ echo "The number of fruits is: ${#fruits[@]}" # Prints 3
 
 fruits=("apple" "banana" "pear")
 for fruit in "${fruits[@]}"; do
-    echo "Fruit: $fruit"
+    echo -e "Fruit: $fruit"
 done
 
 # Expected output:
@@ -57,7 +57,7 @@ done
 
 fruits=("apple" "banana" "pear")
 for ((i = 0; i < ${#fruits[@]}; i++)); do
-    echo "Fruit $((i + 1)): ${fruits[$i]}"
+    echo -e "Fruit $((i + 1)): ${fruits[$i]}"
 done
 
 # Expected output:
@@ -74,7 +74,7 @@ done
 
 fruits=("apple" "banana" "pear")
 fruits[1]="orange" # Changes "banana" to "orange"
-echo ${fruits[1]}   # Prints "orange"
+echo ${fruits[1]}  # Prints "orange"
 
 # 6. Adding Elements to an Array
 
@@ -106,9 +106,9 @@ echo ${fruits[@]} # Prints "apple pear"
 
 fruits=("apple" "banana" "pear")
 if [[ " ${fruits[@]} " =~ " banana " ]]; then
-    echo "Banana is in the array."
+    echo -e "Banana is in the array."
 else
-    echo "Banana is not in the array."
+    echo -e "Banana is not in the array."
 fi
 
 # Summary of Basic Array Operations in Bash
