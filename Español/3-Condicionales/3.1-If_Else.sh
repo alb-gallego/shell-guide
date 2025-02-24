@@ -3,17 +3,17 @@
 # 3.1 - If/Else
 echo -e "\n3.1 If/Else\n"
 
-numero=6
-# La condicion debe ir entre corchetes
-# Para usar expresiones más avanzadas, puedes usar [[ condición ]], que es más potente y flexible.
-# A la izquierda se pone el valor "principal" que se quiere compara. Ej:"$numero"
-# En el centro el operador que se desea usar. Ej:"gt"
-# A la derecha el otro valor que se quiere comparar. Ej:"10"
-# Tras el parentesis siempre ";" y un then para indicar el comienzo del condicional
-# !IMPORTANTE: añadir cierre "fi" al final del condicional
+number=6
+# The condition must be enclosed in brackets.
+# To use more advanced expressions, you can use [[ condition ]], which is more powerful and flexible.
+# On the left, place the "main" value to compare. Example: "$number"
+# In the center, use the operator you want. Example: "gt"
+# On the right, the other value to compare. Example: "10"
+# After the parenthesis, always use ";" followed by "then" to indicate the start of the conditional.
+# !IMPORTANT: Always add "fi" to close the conditional.
 
-if [ $numero -gt 10 ]; then
-    echo -e "El número es mayor que 10"
+if [ $number -gt 10 ]; then
+    echo -e "The number is greater than 10"
 else
-    echo -e "El número es menor o igual a 10"
+    echo -e "The number is less than or equal to 10"
 fi
